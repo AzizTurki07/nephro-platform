@@ -1,10 +1,10 @@
 # Nephro-Platform
 
-Plateforme de gestion néphrologique développée avec Angular (frontend), Spring Boot (backend) et MySQL (base de données), conteneurisée avec Docker.
+Nephrology management platform developed with Angular (frontend), Spring Boot (backend), and MySQL (database), containerized with Docker.
 
 ---
 
-## Structure du projet
+## Project Structure
 
 ```
 nephro-platform/
@@ -16,26 +16,26 @@ nephro-platform/
 
 ---
 
-## Prérequis
+## Prerequisites
 
-- Docker + Docker Compose
-- Node.js (optionnel pour dev Angular local)
-- Java 17 JDK (optionnel pour dev backend local)
+* Docker + Docker Compose
+* Node.js (optional for running Angular locally)
+* Java 17 JDK (optional for running backend locally)
 
 ---
 
-## Lancer le projet
+## Run the Project with Docker
 
-Depuis le dossier racine du projet :
+From the root folder of the project:
 
 ```bash
 docker compose up --build
 ```
 
-- Backend : [http://localhost:8080](http://localhost:8080)  
-- Frontend : [http://localhost:4200](http://localhost:4200)
+* Backend: [http://localhost:8080](http://localhost:8080)
+* Frontend: [http://localhost:4200](http://localhost:4200)
 
-Pour arrêter :
+To stop:
 
 ```bash
 docker compose down
@@ -43,9 +43,9 @@ docker compose down
 
 ---
 
-## Configuration API Angular
+## Angular API Configuration
 
-Le frontend Angular utilise `environment.ts` pour connaître l’URL du backend :
+The Angular frontend uses `environment.ts` to set the backend URL:
 
 ```ts
 // frontend/src/environments/environment.ts
@@ -57,9 +57,9 @@ export const environment = {
 
 ---
 
-## Lancer en local (optionnel)
+## Run Locally (Optional)
 
-**Frontend Angular :**
+**Angular Frontend:**
 
 ```bash
 cd frontend
@@ -67,7 +67,7 @@ npm install
 ng serve
 ```
 
-**Backend Spring Boot :**
+**Spring Boot Backend:**
 
 ```bash
 cd backend
@@ -79,9 +79,9 @@ java -jar target/*.jar
 
 ## Notes
 
-- `.gitignore` est configuré pour ignorer `node_modules/`, `backend/target/`, IDE files et logs.
-- Tous les services utilisent les ports par défaut :
-  - Backend : 8080
-  - Frontend : 4200
-  - MySQL : 3306 (conteneur interne)
+* `.gitignore` is configured to ignore `node_modules/`, `backend/target/`, IDE files, and logs.
+* Default ports used:
 
+  * Backend: 8080
+  * Frontend: 4200
+  * MySQL: 3306 (internal container port)
